@@ -38,7 +38,7 @@
     - name: create directory
       file:
         state: directory
-        dest: "{{ dest_path }}"
+        dest: "{{dest_path}}"
     # Copy Files
     - name: Copy website to hosts
       copy:
