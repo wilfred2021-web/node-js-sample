@@ -20,18 +20,18 @@
     # Start the docker service
     - name: Docker service start
       service:
-	name: docker
+        name: docker
 	state: started
 	enabled: yes
     # install docker python packages
     - name: install docker-py python packages
       pip:
-	name: docker-py
+        name: docker-py
         state: present
     # Pull docker image
     - name: pull docker image
       docker_image:
-	name: nrbaskar/wilfred_nodejs
+        name: nrbaskar/wilfred_nodejs
 	tag: "{{DOCKER_TAG}}
 	source: pull
     # Create directory
@@ -54,7 +54,7 @@
     # e.g : ngix,curl,wget,apache2,nodejs
     - name: install required packages
       yum:
-	name: nodejs
+        name: nodejs
 	state: present
     - name: Install express JS
       command: sudo npm install express
