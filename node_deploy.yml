@@ -21,8 +21,8 @@
     - name: Docker service start
       service:
         name: docker
-	state: started
-	enabled: yes
+        state: started
+        enabled: yes
     # install docker python packages
     - name: install docker-py python packages
       pip:
@@ -32,18 +32,18 @@
     - name: pull docker image
       docker_image:
         name: nrbaskar/wilfred_nodejs
-	tag: "{{DOCKER_TAG}}
-	source: pull
+        tag: "{{DOCKER_TAG}}
+        source: pull
     # Create directory
     - name: create directory
       file:
-	state: directory
-	dest: "{{ dest_path }}"
+        state: directory
+        dest: "{{ dest_path }}"
     # Copy Files
     - name: Copy website to hosts
       copy:
-	src: ./
-	dest: "{{ dest_path }}"
+        src: ./
+        dest: "{{ dest_path }}"
     # Install Nodejs library
     # using multiple shell modules
     - name: Install Nodejs and ExpressJS
@@ -55,7 +55,7 @@
     - name: install required packages
       yum:
         name: nodejs
-	state: present
+        state: present
     - name: Install express JS
       command: sudo npm install express
     # Install all necessary node modules for the project
@@ -84,4 +84,4 @@
     - name: Start service
       command: pm2 start index.js --name: "{{DOCKER_TAG-Service}}"
       args:
-	chdir: "{{ dest_path }}"
+        chdir: "{{ dest_path }}"
