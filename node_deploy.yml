@@ -6,8 +6,7 @@
   vars:
     repo_path: nrbaskar/wilfred_nodejs:{{DOCKER_TAG}}
     dest_path: /home/ec2-user/{{DOCKER_TAG}}
-  
-   tasks:
+  tasks:
      # Install python pip
     - name: Install python pip
       yum:
