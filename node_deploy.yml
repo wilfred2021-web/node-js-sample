@@ -84,4 +84,4 @@
     - name: Start service
       command: pm2 start index.js --name: "{{DOCKER_TAG-Service}}"
       args:
-	chdir: "{{ dest_path }}"		
+	chdir: "{{ dest_path }}"
