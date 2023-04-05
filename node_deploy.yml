@@ -6,12 +6,13 @@
   vars:
     repo_path: nrbaskar/wilfred_nodejs:{{DOCKER_TAG}}
     dest_path: /home/ec2-user/{{DOCKER_TAG}}
-  tasks:
-    # Install python pip
-    - name: Python installation
+  
+   tasks:
+     # Install python pip
+    - name: Install python pip
       yum:
-	name: python-pip
-	state: present  
+        name: python-pip
+        state: present
     # Install docker
     - name: Docker installation
       yum:
