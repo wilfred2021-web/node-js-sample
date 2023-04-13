@@ -32,7 +32,7 @@
     - name: pull docker image
       docker_image:
         name: nrbaskar/wilfred_nodejs
-        tag: "{{DOCKER_TAG}}
+        tag: "{{DOCKER_TAG}}"
         source: pull
     # Create directory
     - name: create directory
