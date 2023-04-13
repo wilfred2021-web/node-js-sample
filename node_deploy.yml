@@ -68,8 +68,7 @@
     # and keep tracking of running process
     - name: Install PM2
       npm: name=pm2 global=yes state=present
-    # is already running and avoids restarting service on 
-    playbook
+    # is already running and avoids restarting service on playbook
     # execution
     - name: Get Forever's list of running processes
       command: pm2 status
