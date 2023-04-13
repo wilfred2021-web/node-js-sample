@@ -50,7 +50,7 @@
       shell: 'curl --silent --location
       https://rpm.nodesource.com/setup_16.x bash -'
     # If other package are required mention the package name in
-    "name"
+      "name"
     # e.g : ngix,curl,wget,apache2,nodejs
     - name: install required packages
       yum:
