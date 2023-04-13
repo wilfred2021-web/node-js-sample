@@ -47,8 +47,7 @@
     # Install Nodejs library
     # using multiple shell modules
     - name: Install Nodejs and ExpressJS
-      shell: 'curl --silent --location
-      https://rpm.nodesource.com/setup_16.x bash -'
+      shell: 'curl --silent --location https://rpm.nodesource.com/setup_16.x | bash -'
     # If other package are required mention the package name in "name"
     # e.g : ngix,curl,wget,apache2,nodejs
     - name: install required packages
